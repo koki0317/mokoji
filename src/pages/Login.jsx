@@ -15,12 +15,12 @@ const Container = styled.div`
 `;
 const Wrapper = styled.div`
   padding: 20px;
-  width: 40%;
+  width: 25%;
   background-color: white;
 `;
 const Form = styled.form`
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
 `;
 const Title = styled.h1`
   font-size: 24px;
@@ -29,7 +29,7 @@ const Title = styled.h1`
 const Input = styled.input`
   flex: 1;
   min-width: 40%;
-  margin: 20px 10px 0 0;
+  margin: 10px 0;
   padding: 10px;
 `;
 const Button = styled.button`
@@ -39,10 +39,15 @@ const Button = styled.button`
   background-color: teal;
   color: white;
   cursor: pointer;
-  margin-top: 20px;
+  margin: 10px 0;
 `;
 
-const Link = styled.a``;
+const Link = styled.a`
+  margin: 5px 0;
+  font-size: 12px;
+  text-decoration: underline;
+  cursor: pointer;
+`;
 
 const Login = () => {
   return (
