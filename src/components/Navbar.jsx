@@ -1,6 +1,7 @@
 import { Search, ShoppingCartOutlined } from "@mui/icons-material";
 import { Badge } from "@mui/material";
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { mobile } from "../responsive";
 
@@ -49,7 +50,9 @@ const Center = styled.div`
 
 const Logo = styled.h1`
   font-weight: bold;
-  ${mobile({ fontsize: "24px" })}
+  text-decoration: none;
+  color: black;
+  ${mobile({ fontsize: "24px" })};
 `;
 
 const Right = styled.div`
@@ -79,15 +82,36 @@ const Navbar = () => {
           </SearchContainer>
         </Left>
         <Center>
-          <Logo>Mokoji.</Logo>
+          <Link to={`/`} style={{ textDecoration: "none" }}>
+            <Logo>Mokoji.</Logo>
+          </Link>
         </Center>
         <Right>
-          <MenuItem>REGISTER</MenuItem>
-          <MenuItem>SIGN IN</MenuItem>
           <MenuItem>
-            <Badge badgeContent={4} color="primary">
-              <ShoppingCartOutlined />
-            </Badge>
+            <Link
+              to={`/register`}
+              style={{ textDecoration: "none", color: "black" }}
+            >
+              REGISTER
+            </Link>
+          </MenuItem>
+          <MenuItem>
+            <Link
+              to={`/login`}
+              style={{ textDecoration: "none", color: "black" }}
+            >
+              SIGN IN
+            </Link>
+          </MenuItem>
+          <MenuItem>
+            <Link
+              to={`/cart`}
+              style={{ textDecoration: "none", color: "black" }}
+            >
+              <Badge badgeContent={0} color="primary">
+                <ShoppingCartOutlined />
+              </Badge>
+            </Link>
           </MenuItem>
         </Right>
       </Wrapper>

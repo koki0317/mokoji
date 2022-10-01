@@ -1,5 +1,6 @@
 import { KeyboardArrowLeft, KeyboardArrowRight } from "@mui/icons-material";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { sliderItems } from "../data";
 import { mobile } from "../responsive";
@@ -98,7 +99,20 @@ const Slider = () => {
             <InfoContainer>
               <Title>{item.title}</Title>
               <Desc>{item.desc}</Desc>
-              <Button>SHOP NOW</Button>
+              <Link
+                to={`/products`}
+                style={{
+                  padding: "10px",
+                  fontSize: "20px",
+                  backgroundColor: "black",
+                  color: "white",
+                  cursor: "pointer",
+                  border: "1px solid black",
+                  textDecoration: "none",
+                }}
+              >
+                SHOP NOW
+              </Link>
             </InfoContainer>
           </Slide>
         ))}
