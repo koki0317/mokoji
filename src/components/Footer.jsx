@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -16,7 +17,9 @@ const Logo = styled.h1`
 const Footer = () => {
   return (
     <Container>
-      <Logo>Mokoji.</Logo>
+      <Link to={`/`} style={{ textDecoration: "none" }}>
+        <Logo>Mokoji.</Logo>
+      </Link>
     </Container>
   );
 };

@@ -81,7 +81,7 @@ const Amount = styled.span`
   width: 30px;
   height: 30px;
   border-radius: 10px;
-  border: 1px solid teal;
+  border: 1px solid #97c8eb;
   display: flex;
   justify-content: center;
   align-items: center;
