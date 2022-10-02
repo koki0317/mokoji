@@ -25,18 +25,18 @@ export const sliderItems = [
 export const categories = [
   {
     id: 1,
-    img: "IMG_2926.JPG",
-    title: "Mokoji1",
+    img: "IMG_2927.JPG",
+    title: "Outdoor",
   },
   {
     id: 2,
-    img: "IMG_2926.JPG",
-    title: "Mokoji2",
+    img: "IMG_2928.JPG",
+    title: "Shopping",
   },
   {
     id: 2,
-    img: "IMG_2926.JPG",
-    title: "Mokoji3",
+    img: "IMG_2929.JPG",
+    title: "Inside",
   },
 ];
 

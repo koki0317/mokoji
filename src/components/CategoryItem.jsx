@@ -14,6 +14,14 @@ const Image = styled.img`
   object-fit: cover;
   ${mobile({ height: "20vh" })}
 `;
+
+const ImgContainer = styled.div`
+  background-color: black;
+  height: 100%;
+
+  opacity: 0.9;
+`;
+
 const Info = styled.div`
   position: absolute;
   width: 100%;
@@ -26,7 +34,9 @@ const Info = styled.div`
   flex-direction: column;
 `;
 const Title = styled.h1`
+  font-size: 40px;
   color: white;
+  text-shadow: 1px 2px 3px #808080;
   margin-bottom: 20px;
 `;
 const Button = styled.button`
@@ -41,7 +51,9 @@ const Button = styled.button`
 const CategoryItem = ({ item }) => {
   return (
     <Container>
-      <Image src={item.img} />
+      <ImgContainer>
+        <Image src={item.img} />
+      </ImgContainer>
       <Info>
         <Title>{item.title}</Title>
         <Link to={`/products`}>
