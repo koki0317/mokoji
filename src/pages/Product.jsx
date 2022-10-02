@@ -1,5 +1,4 @@
 import { Add, Remove } from "@mui/icons-material";
-import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import Announcement from "../components/Announcement";
 import Footer from "../components/Footer";
@@ -107,7 +106,7 @@ const Product = () => {
       <Announcement />
       <Wrapper>
         <ImgContainer>
-          <Image src="IMG_2926.JPG" />
+          <Image src="/IMG_2926.JPG" />
         </ImgContainer>
         <InfoContainer>
           <Title>Dog shirt</Title>
