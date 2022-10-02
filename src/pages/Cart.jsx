@@ -170,9 +170,9 @@ const Cart = () => {
               </ProductDetail>
               <PriceDetail>
                 <ProductAmountContainer>
-                  <Add />
-                  <ProductAmount>2</ProductAmount>
                   <Remove />
+                  <ProductAmount>1</ProductAmount>
+                  <Add />
                 </ProductAmountContainer>
                 <ProductPrice>2000 yen</ProductPrice>
               </PriceDetail>
@@ -196,9 +196,10 @@ const Cart = () => {
               </ProductDetail>
               <PriceDetail>
                 <ProductAmountContainer>
-                  <Add />
-                  <ProductAmount>2</ProductAmount>
                   <Remove />
+                  <ProductAmount>1</ProductAmount>
+
+                  <Add />
                 </ProductAmountContainer>
                 <ProductPrice>2000 yen</ProductPrice>
               </PriceDetail>

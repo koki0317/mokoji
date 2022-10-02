@@ -5,11 +5,11 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: teal;
+  background-color: #97c8eb;
 `;
 
 const Logo = styled.h1`
-  padding: 15px 0;
+  padding: 10px 0;
   color: white;
 `;
 
