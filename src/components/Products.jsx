@@ -1,3 +1,4 @@
+import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import { popularProducts } from "../data";
 import Product from "./Product";
@@ -13,7 +14,7 @@ const Products = () => {
   return (
     <Container>
       {popularProducts.map((item) => (
-        <Product item={item} key={item.id} />
+        <Product item={item} id={item.id} key={item.id} />
       ))}
     </Container>
   );
