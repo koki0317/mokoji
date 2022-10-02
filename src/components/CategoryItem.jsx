@@ -48,7 +48,7 @@ const Button = styled.button`
   font-weight: 600;
 `;
 
-const CategoryItem = ({ item }) => {
+const CategoryItem = ({ item, id }) => {
   return (
     <Container>
       <ImgContainer>
@@ -56,7 +56,7 @@ const CategoryItem = ({ item }) => {
       </ImgContainer>
       <Info>
         <Title>{item.title}</Title>
-        <Link to={`/products`}>
+        <Link to={`/categories/${id.toLowerCase()}`}>
           <Button>SHOP NOW</Button>
         </Link>
       </Info>

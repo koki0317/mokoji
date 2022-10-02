@@ -1,4 +1,5 @@
 import { Add, Remove } from "@mui/icons-material";
+import { useState } from "react";
 import styled from "styled-components";
 import Announcement from "../components/Announcement";
 import Footer from "../components/Footer";
@@ -100,6 +101,15 @@ const Button = styled.button`
 `;
 
 const Product = () => {
+  const [counter, setCounter] = useState(1);
+
+  const handleClickPlus = () => {
+    setCounter(counter + 1);
+  };
+  const handleClickMinus = () => {
+    if (counter < 1) return;
+    setCounter(counter - 1);
+  };
   return (
     <Container>
       <Navbar />
@@ -136,9 +146,9 @@ const Product = () => {
           </FilterContainer>
           <AddContainer>
             <AmountContainer>
-              <Remove />
-              <Amount>1</Amount>
-              <Add />
+              <Remove onClick={handleClickMinus} />
+              <Amount>{counter}</Amount>
+              <Add onClick={handleClickPlus} />
             </AmountContainer>
             <Button>ADD TO CART</Button>
           </AddContainer>

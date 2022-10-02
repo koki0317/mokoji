@@ -1,4 +1,5 @@
 import { Add, Remove } from "@mui/icons-material";
+import { useState } from "react";
 import styled from "styled-components";
 import Announcement from "../components/Announcement";
 import Footer from "../components/Footer";
@@ -136,6 +137,20 @@ const Button = styled.button`
 `;
 
 const Cart = () => {
+  const [counter, setCounter] = useState(1);
+  const [price, setPrice] = useState(2000);
+
+  const handleClickPlus = () => {
+    setCounter(counter + 1);
+    setPrice(price + 2000);
+  };
+
+  const handleClickMinus = () => {
+    if (counter < 1) return;
+    setCounter(counter - 1);
+    setPrice(price - 2000);
+  };
+
   return (
     <Container>
       <Navbar />
@@ -170,46 +185,20 @@ const Cart = () => {
               </ProductDetail>
               <PriceDetail>
                 <ProductAmountContainer>
-                  <Remove />
-                  <ProductAmount>1</ProductAmount>
-                  <Add />
+                  <Remove onClick={handleClickMinus} />
+                  <ProductAmount>{counter}</ProductAmount>
+                  <Add onClick={handleClickPlus} />
                 </ProductAmountContainer>
                 <ProductPrice>2000 yen</ProductPrice>
               </PriceDetail>
             </Product>
             <Hr />
-            <Product>
-              <ProductDetail>
-                <Image src="IMG_2926.JPG" />
-                <Details>
-                  <ProductName>
-                    <b>Product:</b>Nice T-shirt
-                  </ProductName>
-                  <ProductId>
-                    <b>Id:</b>777777
-                  </ProductId>
-                  <ProductColor color="gray" />
-                  <ProductSize>
-                    <b>Size:</b>S
-                  </ProductSize>
-                </Details>
-              </ProductDetail>
-              <PriceDetail>
-                <ProductAmountContainer>
-                  <Remove />
-                  <ProductAmount>1</ProductAmount>
-
-                  <Add />
-                </ProductAmountContainer>
-                <ProductPrice>2000 yen</ProductPrice>
-              </PriceDetail>
-            </Product>
           </Info>
           <Summary>
             <SummaryTitle>ORDER SUMMARY</SummaryTitle>
             <SummaryItem>
               <SummaryItemText>Subtotal</SummaryItemText>
-              <SummaryItemPrice>4000 yen</SummaryItemPrice>
+              <SummaryItemPrice>{price} yen</SummaryItemPrice>
             </SummaryItem>
             <SummaryItem>
               <SummaryItemText>Estimated Shipping</SummaryItemText>
@@ -221,7 +210,7 @@ const Cart = () => {
             </SummaryItem>
             <SummaryItem type="total">
               <SummaryItemText>Total</SummaryItemText>
-              <SummaryItemPrice>4000 yen</SummaryItemPrice>
+              <SummaryItemPrice>{price} yen</SummaryItemPrice>
             </SummaryItem>
             <Button>CHECKOUT NOW</Button>
           </Summary>
